@@ -1,3 +1,8 @@
+## What's different here compared to Valve's upstream Wine?
+
+* **Experimental `MSG_WAITALL` Support:** Added partial handling for `MSG_WAITALL` in socket operations. 
+  > **Note:** This is an initial implementation and is **not production-ready** for all use cases (it lacks full async state tracking and may hang on data transfers larger than the OS socket buffer). However, it enables basic compatibility for specific games/apps that rely on `MSG_WAITALL`.
+
 ## INTRODUCTION
 
 Wine is a program which allows running Microsoft Windows programs
